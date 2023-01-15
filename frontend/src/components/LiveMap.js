@@ -1,15 +1,43 @@
-import { CRS } from 'leaflet';
-import { useCallback, useState, useRef, useMemo } from 'react';
-import { MapContainer, ImageOverlay, useMap, useMapEvents, Marker, Popup } from 'react-leaflet';
-
+import { CRS, Draggable } from 'leaflet';
+import {useState, useRef, useMemo} from 'react';
+import { MapContainer, ImageOverlay, useMapEvents, Marker } from 'react-leaflet';
+import L from 'leaflet';
 
 let imageBounds = [
   [0, 0], // padding
   [2048, 2048], // image dimensions
 ];
 
-const OverlayImage = () => {
-  const map = useMap();
+
+const icon = L.icon({
+  iconSize: [25, 41],
+  iconAnchor: [10, 41],
+  popupAnchor: [2, -40],
+  iconUrl: "https://unpkg.com/leaflet@1.6/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.6/dist/images/marker-shadow.png"
+});
+
+const OverlayImage = ({saveMarkers}) => {
+  const [mrks, setMrks] = useState([]);
+  const map = useMapEvents({
+    click: (e) => {
+      const {lat, lng} = e.latlng;
+      var mrk = new L.marker([lat, lng], {icon}, Draggable=true);
+      map.addLayer(mrk);
+
+      // L.marker([lat, lng], {icon}).addTo(map);
+      setMrks([...mrks, mrk]);
+    },
+    keypress: (e) => {
+      var key = e.originalEvent.key
+      if (key === 'd') {
+        console.log('d was pressed')
+        mrks.forEach(mrk => {
+          map.removeLayer(mrk)
+        })
+      }
+    }
+  })
 
   map.fitBounds(imageBounds);
   const img = require('../assets/universe.jpg')
@@ -28,30 +56,6 @@ const center = {
   lng: -0.09,
 }
 
-function DraggableMarker() {
-  const [position, setPosition] = useState(center)
-  const markerRef = useRef(null)
-  const eventHandlers = useMemo(
-    () => ({
-      dragend() {
-        const marker = markerRef.current
-        if (marker != null) {
-          setPosition(marker.getLatLng())
-        }
-      },
-    }),
-    [],
-  )
-
-  return (
-    <Marker
-      draggable={true}
-      eventHandlers={eventHandlers}
-      position={position}
-      ref={markerRef}>
-    </Marker>
-  )
-}
 
 
 const MapWrapper = () => {
@@ -61,10 +65,7 @@ const MapWrapper = () => {
       maxZoom={10}
       minZoom={-4}
       scrollWheelZoom={false}>
-
-      <DraggableMarker />
       <OverlayImage />
-
     </MapContainer>
   )
 }
