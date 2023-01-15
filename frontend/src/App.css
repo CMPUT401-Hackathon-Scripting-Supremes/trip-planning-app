@@ -364,3 +364,18 @@ button{
 .thirdPage{
   background: #140455;
 }
+
+/* flex-container for third page */
+.flex-container {
+  display: flex;
+}
+
+.flex-child-todo {
+  flex: 2;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.flex-child-map {
+  flex: 3;
+  border: 2px solid rgb(0, 0, 0);  
+}

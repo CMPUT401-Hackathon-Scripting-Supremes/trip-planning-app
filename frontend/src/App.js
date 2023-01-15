@@ -76,7 +76,14 @@ function App() {
       </div>
 
       <div className = "thirdPage">
-        <TodoApp></TodoApp>
+        <div className="flex-container">
+          <div className="flex-child-todo">
+            <TodoApp></TodoApp>
+          </div>
+          <div className="flex-child-map">
+            <MapWrapper/>
+          </div>
+        </div>
       </div>
     </div>
 
