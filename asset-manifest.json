@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/CosmicCompass/static/css/main.6d9fdfb0.css",
-    "main.js": "/CosmicCompass/static/js/main.481afa55.js",
-    "static/js/787.cda612ba.chunk.js": "/CosmicCompass/static/js/787.cda612ba.chunk.js",
-    "static/media/galaxy.png": "/CosmicCompass/static/media/galaxy.caa955568226ec264dc7.png",
-    "static/media/universe.jpg": "/CosmicCompass/static/media/universe.5e9cb2cd83bf393f0bb0.jpg",
-    "static/media/drawingPath.png": "/CosmicCompass/static/media/drawingPath.f2fdcd3f8c192883ddba.png",
-    "static/media/venus.png": "/CosmicCompass/static/media/venus.3c4c4b1477557ae52541.png",
-    "static/media/neptune.png": "/CosmicCompass/static/media/neptune.4c1a2e7d1103b7a5b526.png",
-    "static/media/earth.png": "/CosmicCompass/static/media/earth.d21d82a1a699c370ea24.png",
-    "static/media/mars.png": "/CosmicCompass/static/media/mars.9ff9d2c83461992c6544.png",
-    "static/media/stars.jpeg": "/CosmicCompass/static/media/stars.fdc96be83f94f892b64f.jpeg",
-    "static/media/logo.png": "/CosmicCompass/static/media/logo.bd1fdb4977e624bb2e6b.png",
-    "index.html": "/CosmicCompass/index.html",
-    "main.6d9fdfb0.css.map": "/CosmicCompass/static/css/main.6d9fdfb0.css.map",
-    "main.481afa55.js.map": "/CosmicCompass/static/js/main.481afa55.js.map",
-    "787.cda612ba.chunk.js.map": "/CosmicCompass/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/trip-planning-app/static/css/main.54f3bb8e.css",
+    "main.js": "/trip-planning-app/static/js/main.69066e64.js",
+    "static/js/787.cda612ba.chunk.js": "/trip-planning-app/static/js/787.cda612ba.chunk.js",
+    "static/media/galaxy.png": "/trip-planning-app/static/media/galaxy.caa955568226ec264dc7.png",
+    "static/media/universe.jpg": "/trip-planning-app/static/media/universe.5e9cb2cd83bf393f0bb0.jpg",
+    "static/media/drawingPath.png": "/trip-planning-app/static/media/drawingPath.f2fdcd3f8c192883ddba.png",
+    "static/media/venus.png": "/trip-planning-app/static/media/venus.3c4c4b1477557ae52541.png",
+    "static/media/neptune.png": "/trip-planning-app/static/media/neptune.4c1a2e7d1103b7a5b526.png",
+    "static/media/earth.png": "/trip-planning-app/static/media/earth.d21d82a1a699c370ea24.png",
+    "static/media/mars.png": "/trip-planning-app/static/media/mars.9ff9d2c83461992c6544.png",
+    "static/media/stars.jpeg": "/trip-planning-app/static/media/stars.fdc96be83f94f892b64f.jpeg",
+    "static/media/logo.png": "/trip-planning-app/static/media/logo.bd1fdb4977e624bb2e6b.png",
+    "index.html": "/trip-planning-app/index.html",
+    "main.54f3bb8e.css.map": "/trip-planning-app/static/css/main.54f3bb8e.css.map",
+    "main.69066e64.js.map": "/trip-planning-app/static/js/main.69066e64.js.map",
+    "787.cda612ba.chunk.js.map": "/trip-planning-app/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d9fdfb0.css",
-    "static/js/main.481afa55.js"
+    "static/css/main.54f3bb8e.css",
+    "static/js/main.69066e64.js"
   ]
 }
