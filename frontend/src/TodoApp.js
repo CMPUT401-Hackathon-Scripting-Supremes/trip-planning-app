@@ -24,10 +24,17 @@ function TodoApp() {
     newTodoItems.splice(index, 1);
     setTodoItems(newTodoItems);
   };
-  const done = index => {
-    const newTodoItems = [...todoItems];
-    newTodoItems[index].check = true;
-    setTodoItems(newTodoItems);
+  const done = (index, checked) => {
+    if(checked){
+      const newTodoItems = [...todoItems];
+      newTodoItems[index].check = true;
+      setTodoItems(newTodoItems);
+    }else{
+      // uncheck
+      const newTodoItems = [...todoItems];
+      newTodoItems[index].check = false;
+      setTodoItems(newTodoItems);
+    }
   };
   return (
     <div className="submission">
@@ -49,7 +56,8 @@ function TodoItem({todo, delItem, done, index}){
   return (
           <div className = "todo">
             <div className='group1'>
-                <button className='done' onClick={()=>done(index)}>done</button>
+                {/* <button className='done' onClick={()=>done(index)}>done</button> */}
+                <input className='done' type="checkbox" onClick={(e)=>done(index, e.target.checked)}/>
               {/* <div className='date'>{todo.date}</div> */}
               <div className="todoText" style={{textDecoration: todo.check ? "line-through" : ""}}>{todo.text}</div>
               </div>
