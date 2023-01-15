@@ -60,6 +60,11 @@ html,body
   color: #FFFFFF;
 }
 
+.sign:hover{
+  color: #00D1FF;
+  cursor: pointer;
+}
+
 #login{
   margin-right: 30px;
 }
