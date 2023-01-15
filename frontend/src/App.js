@@ -1,3 +1,5 @@
+
+import MapWrapper from './components/LiveMap';
 import logo from './images/logo.png';
 import './App.css';
 import earth from './images/earth.png';
@@ -8,6 +10,7 @@ import drawingPath from './images/drawingPath.png';
 import TodoApp from './TodoApp';
 
 function App() {
+  
   return (
     <div className = "App">
       <div className = "firstPage">
@@ -76,6 +79,7 @@ function App() {
         <TodoApp></TodoApp>
       </div>
     </div>
+
   );
 }
 
