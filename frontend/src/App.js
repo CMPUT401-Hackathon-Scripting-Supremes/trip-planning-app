@@ -5,6 +5,7 @@ import venus from './images/venus.png';
 import neptune from './images/neptune.png';
 import mars from './images/mars.png';
 import drawingPath from './images/drawingPath.png';
+import TodoApp from './TodoApp';
 
 function App() {
   return (
@@ -69,6 +70,10 @@ function App() {
               </div>
             </div> */}
         </div>
+      </div>
+
+      <div className = "thirdPage">
+        <TodoApp></TodoApp>
       </div>
     </div>
   );
