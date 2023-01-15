@@ -29,7 +29,6 @@ const center = {
 }
 
 function DraggableMarker() {
-  const [draggable, setDraggable] = useState(false)
   const [position, setPosition] = useState(center)
   const markerRef = useRef(null)
   const eventHandlers = useMemo(
@@ -43,23 +42,13 @@ function DraggableMarker() {
     }),
     [],
   )
-  const toggleDraggable = useCallback(() => {
-    setDraggable((d) => !d)
-  }, [])
 
   return (
     <Marker
-      draggable={draggable}
+      draggable={true}
       eventHandlers={eventHandlers}
       position={position}
       ref={markerRef}>
-      <Popup minWidth={90}>
-        <span onClick={toggleDraggable}>
-          {draggable
-            ? 'Marker is draggable'
-            : 'Click here to make marker draggable'}
-        </span>
-      </Popup>
     </Marker>
   )
 }
